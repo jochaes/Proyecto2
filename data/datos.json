@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Meneitos y Picarona",
+        "descripcion": "Descripción del artículo1",
+        "cantidad": 1,
+        "estado": true,
+        "precio": 100,
+        "imagenes": [
+            "img\/img1.png",
+            "img\/img2.png"
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Picaritas",
+        "descripcion": "Descripción del artículo12",
+        "cantidad": 2,
+        "estado": true,
+        "precio": 200,
+        "imagenes": [
+            "img\/img4.png",
+            "img\/img5.png"
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Trijuelas",
+        "descripcion": "Descripción del artículo3",
+        "cantidad": 2,
+        "estado": true,
+        "precio": 300,
+        "imagenes": [
+            "img\/img3.png"
+        ]
+    }
+]
