@@ -70,7 +70,11 @@ const loadItems = () => {
 				li.articulo = articulo // {nombre, descripcion, precio, cantidad, imagenes,id}
 				
 				li.onclick = () => {
-					sellItem(li.articulo)
+					// sellItem(li.articulo)
+
+					addToCart(li.articulo)
+
+
 				}
 
 				//Le coloca la clase card
@@ -89,8 +93,6 @@ const loadItems = () => {
 				}); 
 
 				
-
-
 				listaArticulos.appendChild(li)
 			})
 		} else {
