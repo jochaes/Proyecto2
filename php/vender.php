@@ -24,17 +24,23 @@ if ($manejador)
     fclose($manejador);
 
     // Decodifica la cadena JSON en un array de PHP
-    $datos = json_decode($json_data, true);
+    $datos = json_decode($json_data, true); 
+    //[prod1,prod2,prod3]
 
     $cont=0;
-    while ($cont<count($datos))
+    while ($cont<count($datos)) 
     {
         if ($datos[$cont]['id']==$id)
         {
-            $datos[$cont]['cantidad']-=1;
+            if ($datos[$cont]['cantidad'] > 0)
+            {
+                $datos[$cont]['cantidad']--;
+            }
         }
         $cont++;
     }
+
+
     
 
     // if ($datos !== null) {
