@@ -1,0 +1,72 @@
+/* Para el modal que muestra el resumen de la compra */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Para los Items que se muestran dentro del modal */
+
+/* Productos de Carrito de Compras */
+
+.checkout-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.checkout-item-info{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+  align-items: center;
+  width: 50%;
+}
+
+.checkout-item-info img {
+  width: 50px;
+  height: 50px;
+}
+
+.checkout-item-quantity {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 30%;
+}
+
+
+
+
