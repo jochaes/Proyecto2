@@ -16,7 +16,6 @@ const sellItem = (articulo) => {
 	xhr.onload = function () {
 		if (xhr.status === 200) {
 
-
 			console.log(xhr.responseText)
 			// Parsear la respuesta JSON
 			var respuesta = xhr.responseText
@@ -29,9 +28,12 @@ const sellItem = (articulo) => {
 		}
 	}
 
-
 	// Enviar la solicitud AJAX
 	xhr.send(JSON.stringify(articulo))
+
+
+	
+	
 }
 
 

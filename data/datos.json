@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Meneitos y Picarona",
         "descripcion": "Descripción del artículo1",
-        "cantidad": 100,
+        "cantidad": 10,
         "estado": true,
         "precio": 100,
         "imagenes": [
@@ -15,7 +15,7 @@
         "id": 2,
         "nombre": "Picaritas",
         "descripcion": "Descripción del artículo12",
-        "cantidad": 99,
+        "cantidad": 10,
         "estado": true,
         "precio": 200,
         "imagenes": [
@@ -27,7 +27,7 @@
         "id": 3,
         "nombre": "Trijuelas",
         "descripcion": "Descripción del artículo3",
-        "cantidad": 100,
+        "cantidad": 10,
         "estado": true,
         "precio": 300,
         "imagenes": [

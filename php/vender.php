@@ -14,6 +14,7 @@ if (isset($_GET['id'])==false)
 
 
 $id=$_GET['id'];
+$cantidadPedido=$_GET['cantidad'];
 
 if ($manejador) 
 {
@@ -34,14 +35,11 @@ if ($manejador)
         {
             if ($datos[$cont]['cantidad'] > 0)
             {
-                $datos[$cont]['cantidad']--;
+                $datos[$cont]['cantidad'] = $datos[$cont]['cantidad'] - $cantidadPedido;
             }
         }
         $cont++;
     }
-
-
-    
 
     // if ($datos !== null) {
     //     // Puedes acceder a los datos como un array de objetos

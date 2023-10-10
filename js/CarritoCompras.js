@@ -25,6 +25,42 @@ const addCheckoutTotal = () => {
 	return total.toFixed(2)
 }
 
+const checkCartStock = ( cartItems ) => {
+
+	const itemListToCheck = cartItems.map( item => { return { id: item.id, cantidad: item.cantidad } } )
+
+
+	// Crear una instancia de XMLHttpRequest
+	var xhr = new XMLHttpRequest()
+
+	// Configurar la solicitud AJAX para enviarle la lista de items 
+	xhr.open("POST", "php/checkStock.php", true)
+	
+
+	xhr.setRequestHeader("Content-Type", "application/json")
+	xhr.send(JSON.stringify(itemListToCheck))
+
+	// Configurar el manejo de la respuesta
+
+	xhr.onload = function () {
+
+		if (xhr.status === 200) {
+
+			// Parsear la respuesta JSON
+			var respuesta = JSON.parse(xhr.responseText)
+			console.log(respuesta);
+
+			if (respuesta.status === "ok") {
+				console.log("Stock verificado");
+			} else {
+				console.error("Error en la solicitud: " + respuesta.message)
+			}
+		}
+	}
+
+}
+
+
 const loadCart = () => {
 	// Evento para mostrar/ocultar el carrito
 	cartToggle.addEventListener("click", () => {
@@ -51,6 +87,10 @@ const loadCart = () => {
 
 	// Evento para cerrar la vista de resumen
 	checkoutButton.addEventListener("click", () => {
+
+
+		checkCartStock( getCartItems() )
+
 		// Mostrar el modal
 		checkoutModal.style.display = "block"
 
