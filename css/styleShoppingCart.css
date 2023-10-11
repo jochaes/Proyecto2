@@ -1,4 +1,7 @@
-/* styles.css */
+
+
+
+/* Estilo del Carrito de Compras */
 #cart {
   position: fixed;
   top: 0;
@@ -11,15 +14,19 @@
   transition: right 0.3s;
 }
 
+
+/* Muestra el Carrito de Compras */
 #cart.show {
-  right: 0; /* Mostrar el carrito */
+  right: 0;
 }
 
+/* Estilo del Titulo del carrito de Compras */
 #cart h2 {
   text-align: center;
   margin: 20px 0;
 }
 
+/* Elimina el estilo por defecto de los tags de listas*/
 #cart-items {
   list-style: none;
   padding: 0;
@@ -27,6 +34,7 @@
 
 /* Productos de Carrito de Compras */
 
+/* Estilo para los productos del carrito de compras */
 .cart-item {
   display: flex;
   flex-direction: row;
@@ -37,6 +45,9 @@
   width: 100%;
 }
 
+/* Estilo de la información del carrito de compras 
+   Información de nombre y precio del producto
+*/
 .cart-item-info{
   display: flex;
   flex-direction: row;
@@ -46,11 +57,17 @@
   width: 50%;
 }
 
+/*
+  Estilo de la imagen del producto
+*/
 .cart-item-info img {
   width: 50px;
   height: 50px;
 }
 
+/*
+  Estilo de la información de cantidad del producto a adquirir
+*/
 .cart-item-quantity {
   display: flex;
   flex-direction: row;
@@ -60,6 +77,10 @@
   width: 30%;
 }
 
+
+/*
+  Esto de acá es para quitarle los botones de incremento y decremento al input de cantidad
+*/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -72,6 +93,9 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+/*
+  Estilo del botón para cambiar la cantidad del producto
+*/
 .cart-item-quantity button {
   border: none;
   background-color: transparent;
@@ -80,11 +104,31 @@ input[type=number] {
   font-size: 1.5rem;
 }
 
+
+/*
+  Estilo del input de cantidad del producto
+*/
+.cart-item-quantity input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/*
+  Estilo del lugar dónde está el botón de eliminar el producto del carrito de compras
+*/
 .cart-item-remove {
   width: 20%;
   text-align: center;
 }
 
+
+/*
+  Estilo del botón para eliminar el producto del carrito de compras
+*/
 .cart-item-remove button {
   border: none;
   background-color: transparent;
@@ -94,21 +138,19 @@ input[type=number] {
 }
 
 
-#cart-items li input {
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
 
 
-
+/*
+  Para que el último elemento de la lista no tenga borde inferior
+*/
 #cart-items li:last-child {
   border-bottom: none;
 }
 
 
+/*
+  Estilo los botones de Checkout y Limpiar Carrito
+*/
 #clear-cart,
 #checkout {
   display: block;

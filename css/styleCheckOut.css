@@ -1,4 +1,6 @@
-/* Para el modal que muestra el resumen de la compra */
+
+
+/* Estilo del modal que muestra la información de la compra antes de pagar */
 .modal {
   display: none;
   position: fixed;
@@ -11,6 +13,7 @@
   overflow: auto;
 }
 
+/* Estilo del contenido del modal que muestra la información de la compra antes de pagar */
 .modal-content {
   background-color: #fff;
   margin: 10% auto;
@@ -20,20 +23,20 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-
+/* boton para cerrar el modal */
 .close {
   float: right;
   cursor: pointer;
 }
 
+/* Estilo del botón de cerrar modal, cuando pasa por encima*/
 .close:hover {
   color: red;
 }
 
 /* Para los Items que se muestran dentro del modal */
 
-/* Productos de Carrito de Compras */
-
+/* Producto del Carrito de Compras */
 .checkout-item {
   display: flex;
   flex-direction: row;
@@ -44,6 +47,9 @@
   width: 100%;
 }
 
+/* Información del producto 
+  Nombre y precio del producto
+*/
 .checkout-item-info{
   display: flex;
   flex-direction: row;
@@ -53,11 +59,15 @@
   width: 50%;
 }
 
+/* Estilo de la imagen del componente del producto
+*/
 .checkout-item-info img {
   width: 50px;
   height: 50px;
 }
 
+/* Estilo del componente que muestra la cantidad de productos a adquirir
+*/
 .checkout-item-quantity {
   display: flex;
   flex-direction: row;
