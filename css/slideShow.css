@@ -44,7 +44,7 @@
 }
 
 .mySlides img {
-  width: 300px; /* Establece el ancho que desees */
-  height: 300px; /* Establece la altura que desees */
-  object-fit: cover; /* Ajusta la imagen al tamaño sin distorsión */
+  width: 300px; 
+  height: 300px; 
+  object-fit: cover; 
 }

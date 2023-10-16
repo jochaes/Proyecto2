@@ -1,7 +1,7 @@
 let slideIndex = 1
 let products = []
 
-// Realizar una solicitud HTTP para obtener los datos desde productos.json
+// Realizar una solicitud al PHP para obtener los datos desde datos.json
 
 const xhr = new XMLHttpRequest()
 xhr.open("GET", "php/listarArticulos.php", true)
@@ -39,6 +39,12 @@ function showSlides(n) {
 		const product = products[slideIndex - 1]
 		const slide = document.createElement("div")
 		slide.className = "mySlides fade"
+
+
+		slide.onclick = () => {
+			showProductModal(product)
+		};
+
 		slide.innerHTML = `
                     <img src="${product.imagenes[0]}" alt="${product.nombre}">
                     <div class="product-details">
@@ -47,6 +53,7 @@ function showSlides(n) {
                         <p>Precio: $${product.precio}</p>
                     </div>
                 `
+
 		container.appendChild(slide)
 	} else {
 		// Si el producto no está destacado, intenta el siguiente

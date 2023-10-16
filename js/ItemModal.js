@@ -6,7 +6,7 @@ const productPrice = document.getElementById("product-price");
 const addToCartButton = document.getElementById("add-to-cart-button");
 
 
-
+// Muestra el modal con los detalles del producto
 const showProductModal = (product) => {
   productName.textContent = product.nombre;
   productDescription.textContent = product.descripcion;
@@ -20,6 +20,7 @@ const showProductModal = (product) => {
 
 }
 
+// Cierra el modal
 const closeProductModal = () => {
   productModal.style.display = "none";
 }

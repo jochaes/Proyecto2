@@ -1,3 +1,5 @@
+
+/* Contenedor de los datos del productos */
 #datos-container {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +7,7 @@
   padding: 20px;
 }
 
-/* Style each item within the JSON data */
+/* Contenedor de los datos del productos */
 #datos-container div {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -18,6 +20,7 @@
 }
 
 
+/* Imagen del contenedor */
 #datos-container img {
   width: 200px; 
   height: 250px; 
@@ -25,20 +28,9 @@
   margin: 10px; 
 }
 
-/* Style individual data fields */
+
+/* Descripcion del contenedor */
 #datos-container p {
   margin: 0;
   padding: 5px 0;
-}
-
-/* Style specific data fields */
-#datos-container div:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  #datos-container div {
-      width: 100%;
-  }
 }
