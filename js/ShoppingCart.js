@@ -103,7 +103,7 @@ const checkCartStock = ( cartItems ) => {
 }
 
 
-
+//Carga el Modal de CheckOut
 const loadCheckOutModal = () => {
 
 			// Mostrar el modal
@@ -222,41 +222,6 @@ const loadCart = () => {
 		const checkoutModal = document.getElementById("checkout-modal")
 		checkoutModal.style.display = "none"
 	})
-
-	// // Evento para finalizar la compra
-	// checkoutButton.addEventListener("click", () => {
-
-	// 	paypalButtonContainer.innerHTML = ""
-
-	// 	paypal
-	// 		.Buttons({
-	// 			createOrder: function (data, actions) {
-	// 				// Calculate the total amount and create purchase units for each item in the cart
-	// 				var purchase_units = getCartItems().map(function (item) {
-	// 					return {
-	// 						reference_id: "item_" + item.id, // Add a unique reference ID for each item
-	// 						description: item.nombre,
-	// 						amount: {
-	// 							value: (item.precio * item.cantidad).toFixed(2) // Calculate the total price for each item
-	// 						},
-	// 						quantity: item.cantidad
-	// 					}
-	// 				})
-
-	// 				return actions.order.create({
-	// 					purchase_units: purchase_units
-	// 				})
-	// 			},
-	// 			onApprove: function (data, actions) {
-	// 				return actions.order.capture().then(function (details) {
-	// 					cartItemsList.innerHTML = ""
-	// 					alert("Transaction completed by " + details.payer.name.given_name)
-	// 					// Handle successful payment (e.g., display a thank-you message).
-	// 				})
-	// 			}
-	// 		})
-	// 		.render("#paypal-button-container")
-	// })
 }
 
 const addToCart = product => {
@@ -321,15 +286,6 @@ const addToCart = product => {
 	})
 
 	cartItemsList.appendChild(cartItem)
-}
-
-
-
-showDescriptionModal = (product) => {
-
-	
-
-
 }
 
 

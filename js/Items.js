@@ -38,9 +38,9 @@ const loadItems = () => {
 					// sellItem(li.articulo)
 				
 				
-					//showDescriptionModal(itemDiv.articulo)
+					showProductModal(itemDiv.articulo)
 				
-					addToCart(itemDiv.articulo)
+					//addToCart(itemDiv.articulo)
 				
 				}
 

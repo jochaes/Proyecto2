@@ -18,9 +18,13 @@
         <link rel="stylesheet" href="css/slideShow.css" />
         <!-- Slideshow *** -->
 
-        <!-- *** Slideshow -->
+        <!-- *** Contenedor de la Info de cada Producto -->
         <link rel="stylesheet" href="css/datosContainer.css" />
-        <!-- Slideshow *** -->
+        <!-- Contenedor de la Info de cada Producto *** -->
+
+        <!-- *** Modal del Producto -->
+        <link rel="stylesheet" href="css/productModal.css" />
+        <!-- Modal del Producto *** -->
         
 
 
@@ -38,6 +42,7 @@
 
 			<h2>Estos son los productos destacados</h2>
 
+            <!-- Este es el div del SlideShow -->
             <div>
 
                 <div class="slideshow-container" id="slideshow-container"></div>
@@ -48,11 +53,14 @@
 			
 
             <h2>Estos son todos los productos</h2>
+
+            <!-- Este es el contenedor de la lista de productos -->
 			<div id="datos-container"></div>
 
 
 		</main>
 
+        <!-- Carrito de Comras -->
 		<aside id="cart" class="hidden">
 			<h2>Carrito de Compras</h2>
 			<ul id="cart-items">
@@ -62,6 +70,7 @@
 			<button id="checkout">Comprar Artículos</button>
 		</aside>
 
+        <!-- Modal con la información de checkout -->
 		<div id="checkout-modal" class="modal hidden">
 			<div class="modal-content">
 				<span class="close" id="close-modal">&times;</span>
@@ -74,16 +83,22 @@
 			</div>
 		</div>
 
-		<div id="product-description-modal" class="modal hidden">
-			<div class="modal-content">
-				<span class="close" onclick="closeDescriptionModal()">&times;</span>
-				<h2>Product Description</h2>
-				<p id="product-description"></p>
-			</div>
-		</div>
+
+        <!-- Modal con la descripción del producto -->
+		<div id="product-modal" class="modal product-modal  hidden">
+            <div class="modal-content product-modal-content ">
+              <span class="close" onclick="closeProductModal()">&times;</span>
+              <h2 id="product-name"></h2>
+              <p id="product-description"></p>
+              <img id="product-image" src="" alt="Product Image">
+              <p id="product-price"></p>
+              <button id="add-to-cart-button">Add to Cart</button>
+            </div>
+          </div>
 
 		<script src="js/Items.js"></script>
 		<script src="js/ShoppingCart.js"></script>
         <script src="js/SlideShow.js"></script>
+        <script src="js/ItemModal.js"></script>
 	</body>
 </html>
