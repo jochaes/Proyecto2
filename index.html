@@ -1,64 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="img/icon.png" type="image/png" sizes="16x16" />
+		<link rel="stylesheet" href="css/style.css" />
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/icon.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- *** Carrito de Compras y CheckOut -->
-    <link rel="stylesheet" href="css/styleShoppingCart.css">
-    <link rel="stylesheet" href="css/styleCheckOut.css">
-    <script src="https://www.paypal.com/sdk/js?client-id=ARfjaOtWaidl0XWPjZZR5g69IVcJJfIUweF8E-wsKo7oxuIuRzPdl3pj0jeydAJblzigb2VrIa2-ydBT"></script>
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" >
-    <!-- Carrito de Compras y CheckOut *** -->
+		<!-- *** Carrito de Compras y CheckOut -->
+		<link rel="stylesheet" href="css/styleShoppingCart.css" />
+		<link rel="stylesheet" href="css/styleCheckOut.css" />
+		<script src="https://www.paypal.com/sdk/js?client-id=ARfjaOtWaidl0XWPjZZR5g69IVcJJfIUweF8E-wsKo7oxuIuRzPdl3pj0jeydAJblzigb2VrIa2-ydBT"></script>
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+		<!-- Carrito de Compras y CheckOut *** -->
 
-    <title>Tienda Meneitos</title>
-</head>
-<body onload="loadItems(); loadCart()">
 
-    <header>
-        <nav>
-            <button id="cart-toggle">Carrito de Compras</button>
-        </nav>
-    </header>
+        <!-- *** Slideshow -->
+        <link rel="stylesheet" href="css/slideShow.css" />
+        <!-- Slideshow *** -->
 
-    <main>
-        <h1>TIENDA TIENDA</h1>
-        <ul id="lista-articulos"></ul>
-
-    </main>
-
-    <aside id="cart" class="hidden show">
-        <h2>Carrito de Compras</h2>
-        <ul id="cart-items">
-            <!-- Lista de productos en el carrito -->
-        </ul>
-        <button id="clear-cart">Vaciar Carrito</button>
-        <button id="checkout">Comprar Artículos</button>
+        <!-- *** Slideshow -->
+        <link rel="stylesheet" href="css/datosContainer.css" />
+        <!-- Slideshow *** -->
         
-    </aside>
 
 
+		<title>Pulperia los Montoya</title>
+	</head>
+	<body onload="loadItems(); loadCart()">
+		<header>
+			<nav>
+				<button id="cart-toggle">Carrito de Compras</button>
+			</nav>
+		</header>
 
-    
-    <div id="checkout-modal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close" id="close-modal">&times;</span>
-            <h2>Resumen de la Compra</h2>
-            <ul id="checkout-items">
-                <!-- Lista de productos en el carrito -->
-            </ul>
-            <h3>Total: <span id="checkout-total"></span></h3>
-            <div id="paypal-button-container"></div>
-        </div>
-    </div>
-    
-    
-    <script src="js/Items.js"></script>
-    <script src="js/ShoppingCart.js"></script>
+		<main>
+			<h1>Pulpería los Montoya</h1>
 
-</body>
+			<h2>Estos son los productos destacados</h2>
+
+            <div>
+
+                <div class="slideshow-container" id="slideshow-container"></div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+			
+
+            <h2>Estos son todos los productos</h2>
+			<div id="datos-container"></div>
+
+
+		</main>
+
+		<aside id="cart" class="hidden">
+			<h2>Carrito de Compras</h2>
+			<ul id="cart-items">
+				<!-- Lista de productos en el carrito -->
+			</ul>
+			<button id="clear-cart">Vaciar Carrito</button>
+			<button id="checkout">Comprar Artículos</button>
+		</aside>
+
+		<div id="checkout-modal" class="modal hidden">
+			<div class="modal-content">
+				<span class="close" id="close-modal">&times;</span>
+				<h2>Resumen de la Compra</h2>
+				<ul id="checkout-items">
+					<!-- Lista de productos en el carrito -->
+				</ul>
+				<h3>Total: <span id="checkout-total"></span></h3>
+				<div id="paypal-button-container"></div>
+			</div>
+		</div>
+
+		<div id="product-description-modal" class="modal hidden">
+			<div class="modal-content">
+				<span class="close" onclick="closeDescriptionModal()">&times;</span>
+				<h2>Product Description</h2>
+				<p id="product-description"></p>
+			</div>
+		</div>
+
+		<script src="js/Items.js"></script>
+		<script src="js/ShoppingCart.js"></script>
+        <script src="js/SlideShow.js"></script>
+	</body>
 </html>

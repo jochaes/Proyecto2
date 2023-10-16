@@ -1,0 +1,50 @@
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Botones de navegación */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  color: #fff;
+  font-size: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: #555;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.product-details {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.mySlides img {
+  width: 300px; /* Establece el ancho que desees */
+  height: 300px; /* Establece la altura que desees */
+  object-fit: cover; /* Ajusta la imagen al tamaño sin distorsión */
+}

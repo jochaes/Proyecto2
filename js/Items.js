@@ -1,45 +1,4 @@
 
-log = console.log("holis")
-
-
-
-const sellItem = (articulo) => {
-	// Crear una instancia de XMLHttpRequest
-	var xhr = new XMLHttpRequest()
-	
-	// Configurar la solicitud AJAX
-	xhr.open("GET", "php/vender.php?id="+articulo.id, true)
-	xhr.setRequestHeader("Content-Type", "application/json")
-
-
-	// Configurar el manejo de la respuesta
-	xhr.onload = function () {
-		if (xhr.status === 200) {
-
-			console.log(xhr.responseText)
-			// Parsear la respuesta JSON
-			var respuesta = xhr.responseText
-			console.log(respuesta)
-			if (respuesta === "ok") {
-				loadItems()
-			} else {
-				console.error("Error en la solicitud: " + respuesta.message)
-			}
-		}
-	}
-
-	// Enviar la solicitud AJAX
-	xhr.send(JSON.stringify(articulo))
-
-
-	
-	
-}
-
-
-
-
-//HOla
 const loadItems = () => {
   
 	var articulos
@@ -61,42 +20,44 @@ const loadItems = () => {
 	xhr.onload = function () {
 		if (xhr.status === 200) {
 			// Parsear la respuesta JSON
-			articulos = JSON.parse(xhr.responseText)
+			data = JSON.parse(xhr.responseText)
 
 			// Mostrar los artículos en la página
-			var listaArticulos = document.getElementById("lista-articulos")
-			listaArticulos.innerHTML = ""
-			articulos.forEach(function (articulo) {
-				var li = document.createElement("li")
-				li.textContent = articulo.nombre + " (" + articulo.cantidad + ") ₡ " + articulo.precio  
-				li.articulo = articulo // {nombre, descripcion, precio, cantidad, imagenes,id}
-				
-				li.onclick = () => {
+			var datosContainer = document.getElementById("datos-container")
+			datosContainer.innerHTML = ""
+
+			data.forEach(function (item) {
+				var itemDiv = document.createElement("div");
+				itemDiv.innerHTML = "ID: " + item.id + "<br>";
+				itemDiv.innerHTML += "Nombre: " + item.nombre + "<br>";
+				itemDiv.innerHTML += "Precio: " + item.precio + "<br>";
+				itemDiv.innerHTML += "Descripcion: " + item.descripcion + "<br>";
+				itemDiv.articulo = item
+
+				itemDiv.onclick = () => {
 					// sellItem(li.articulo)
-
-					addToCart(li.articulo)
-
-
+				
+				
+					//showDescriptionModal(itemDiv.articulo)
+				
+					addToCart(itemDiv.articulo)
+				
 				}
 
-				//Le coloca la clase card
-				li.classList.add("card")
+				// Agrega imágenes
+				item.imagenes.forEach(function (imagenSrc) {
+						var imagen = document.createElement("img");
+						imagen.src = imagenSrc;
+						itemDiv.appendChild(imagen);
+				});
 
-	
-				//Por cada imagen del articulo, crea un elemento img y lo agrega al li
-				articulo.imagenes.forEach(img => {
+				itemDiv.innerHTML += "<br><br>";
+				datosContainer.appendChild(itemDiv);
+		});
 
-					var imgTag = document.createElement("img")
-					imgTag.src = img
-					imgTag.width = 100
-					imgTag.height = 100
-					li.appendChild(imgTag)
-					
-				}); 
+		
 
-				
-				listaArticulos.appendChild(li)
-			})
+			
 		} else {
 			console.error("Error en la solicitud: " + xhr.status)
 		}

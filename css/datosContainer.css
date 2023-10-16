@@ -1,0 +1,44 @@
+#datos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* Style each item within the JSON data */
+#datos-container div {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+
+#datos-container img {
+  width: 200px; 
+  height: 250px; 
+  object-fit: cover; 
+  margin: 10px; 
+}
+
+/* Style individual data fields */
+#datos-container p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* Style specific data fields */
+#datos-container div:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  #datos-container div {
+      width: 100%;
+  }
+}

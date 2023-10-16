@@ -1,12 +1,10 @@
-<!-- Check Stock
-
-Este Script verifica si hay suficiente stock para los productos que se van a comprar.
-Se llama antes de cargar la pagina de confirmacion de compra.
-
--->
-
-
 <?php
+
+// Check Stock
+
+// Este Script verifica si hay suficiente stock para los productos que se van a comprar.
+// Se llama antes de cargar la pagina de confirmacion de compra.
+
 
 // Archivo JSON con los datos de los productos
 $archivo = '../data/datos.json'; 
