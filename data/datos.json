@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Meneitos y Picarona",
         "descripcion": "Descripción del artículo1",
-        "cantidad": 7,
+        "cantidad": 6,
         "estado": true,
         "precio": 100,
         "imagenes": [
